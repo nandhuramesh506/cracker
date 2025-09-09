@@ -1,0 +1,334 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.moving-text {
+    width: 100%;
+    height: 8%;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+}
+
+.moving-text p {
+    color: white;
+    position: absolute;
+    white-space: nowrap;
+    animation: moveText 30s linear infinite;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@keyframes moveText {
+    0% { left: 0%; }
+    50% { left: 100%; transform: translateX(-100%); }
+    100% { left: 0%; }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff9800;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar ul li a img {
+    border: 1px solid orange;
+    border-radius: 50%;
+    padding: 5px;
+    position: relative;
+}
+
+.navbar ul li a span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 55%;
+    right: 5px;
+}
+
+.navbar ul li a:hover {
+    background-color: #f0f0f0;
+    color: #ff9800;
+}
+
+.navbar ul li a img:hover {
+    border-radius: 50%;
+    background-color: orange;
+    padding: 5px;
+}
+
+.section {
+    display: none; /* Hidden by default */
+    padding: 20px;
+}
+
+.section.active {
+    display: block; /* Show when active */
+}
+
+.slider {
+    width: 100%;
+    max-width: 100vw;
+    height: 550px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    transition: left 0.5s ease;
+}
+
+.list img {
+    width: 100vw;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain;
+}
+
+.buttons {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: orange;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.dots {
+    position: absolute;
+    bottom: 10px;
+    color: #fff;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.dots li {
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: orange;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.dots li.active {
+    width: 30px;
+}
+
+/* Add to Cart Section */
+.add-to-cart {
+    width: 400px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -500px; /* Initially hidden */
+    background-color: rgb(255, 255, 255);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    padding: 20px;
+    overflow-y: auto;
+    inset: 0 -500px 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+}
+
+.add-to-cart.active {
+    right: 0; /* Slide in */
+}
+
+.add-to-cart h1 {
+    margin-top: 0;
+    padding: 20px;
+    font-weight: 300;
+}
+
+.add-to-cart .btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.add-to-cart .btn button {
+    background-color: orange;
+    border: none;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.add-to-cart .btn .close {
+    background-color: white;
+}
+
+.add-to-cart .listCart .item img {
+    width: 100%;
+}
+
+.add-to-cart .listCart .item {
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.listCart .quantity span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.listCart .quantity span:nth-child(2) {
+    background-color: transparent;
+    color: #eee;
+}
+
+.listCart .item:nth-child(even) {
+    background-color: rgba(223, 216, 216, 0.067);
+}
+
+.listCart {
+    overflow: auto;
+}
+
+.listCart::-webkit-scrollbar {
+    width: 0;
+}
+
+/* cracker list */
+.listProduct .item img {
+    width: 90%;
+    height: 60%;
+    filter: drop-shadow(0 50px 20px #0009);
+    background-size: contain; 
+}
+
+.listProduct {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.listProduct .item {
+    background-color: #eeeee6;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.listProduct .item h2 {
+    font-weight: 500;
+    font-size: large;
+}
+
+.listProduct .item .price {
+    letter-spacing: 7px;
+    font-size: small;
+}
+
+.listProduct .item button {
+    background-color: orange;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.listProduct .item .close {
+    background-color: white;
+}
+
+/* Total summary container */
+.total-summary {
+    text-align: center;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+   margin-top: -60%;
+}
+
+/* Styling for the total quantity and total price text */
+.total-summary h2 {
+    font-size: 18px;
+    color: #333; /* Dark text for good contrast */
+    margin: 10px 0;
+    font-weight: normal; /* Consistent font weight */
+}
+
+.total-summary span {
+    font-weight: bold; /* Bold styling for the dynamic data (quantity and price) */
+    color: #f26a2e; /* Highlighted color for the numbers */
+    
+}

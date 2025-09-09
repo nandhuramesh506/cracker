@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&amp;display=swap');
+.roboto{font-family: 'Nunito', sans-serif;}
+li{list-style-type:none!important;}
+a{text-decoration:none!important;}
+.heading1{font-size: 2.5rem;} .heading2{font-size: 2rem;} .heading3{font-size: 1.75rem;} .heading4{font-size: 1.5rem;} .heading5{font-size: 1.25rem;} .heading6{font-size: 1rem;}
+.pad{padding:90px 0;}
+.bgclr{background-color: #800000; color:white; padding:10px 0px;}
+.fullpad{padding:0!important; margin:0!important;}
+.wrdbrk{white-space:pre;}
+.secpad{padding-left:3px!important; padding-right:3px!important;}
+.feature-gd {
+    background:#f0e982;
+    padding: 5px 15px 5px 15px;
+    border-radius: 8px;
+    height: 130px;
+}
+.sno{
+	position: absolute;
+	background: #c33;
+	padding: 0px 8px 0px 8px;
+	top: 8px;
+	left: 3px;
+	font-size: 14px;
+	border-radius: 0px 0 8px 0;
+	color: white;
+}
+.icon {margin-right:2px;}
+.icon img {border-radius: 15px; max-width: 80px; max-height: 80px;}
+.producttext{font-size: 16px; color: black; text-align: left; height: 34px; line-height: 18px;}
+.strike{color:red; text-decoration:line-through; font-size: 16px;}
+.rate{color:black; font-size: 16px;}
+.qtypad {padding-left:65px;}
+.leftmargin{margin-left:30px;}
+.product-form .form-control {
+	width: 50px !important;
+	margin-bottom: 10px !important;
+	height: 35px !important;
+	padding: 5px !important;
+	border: 1px solid #454b51 !important;
+	text-align: center;
+}
+.clr{color:red;}
+.pricebox{
+	position: absolute;
+	background: #e15b5b;
+	padding: 5px 5px;
+	bottom: 0px;
+	right: 3px;
+	font-size: 15px;
+	border-radius: 22px 0 8px 0;
+	color: white;
+	width: 100px;
+	text-align: center;
+}
+.cursor{cursor:pointer;}
+.fixed {position: fixed; z-index: 4000 !important;}
+.point2 {top: 35px; right:0px; z-index: 4000 !important;}
+.btncart {color: #fe3000 !important; padding: 7px 20px 27px 20px; font-size: 28px;}
+.smallbutton {
+    height: 60px;
+	width: 60px;
+    background:linear-gradient(90deg, #ffd805, #f70818);
+    display: block;
+    float: right;
+    border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+}
+.badges {
+    position: absolute;
+    background-color: #2f2f2f;
+    border-radius: 50%;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    top: -7px;
+    right: 9px;
+    font-size: 13px;
+    z-index: 34;
+}
+.badgescntr {
+    place-content: center;
+    align-items: center;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+}
+.leftbg {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(254, 48, 0);
+    scrollbar-width: thin;
+}
+.contact-form .form-control{width: 50px!important; padding: 2px!important; height: 23px!important; text-align:center; margin-bottom: 4px;}
+.txtwidth{width:140px;}
+.contact-form .form-group {margin-bottom:-6px!important; padding: 0px 5px; text-align: center;}
+.brdimg{width: 6px; }
+.bill1{flex: 1 1 1e-9px;
+	display: flex;
+	place-content: center space-between;
+	align-items: center;
+	background: white;
+	padding: 4px 1px;
+	margin: 0;
+	border-bottom: 1px dotted silver;
+	font-size: 13px;}	
+.fnt1{font-size: 22px;}
+.bill{flex: 1 1 1e-9px;
+	display: flex;
+	place-content: center space-between;
+	align-items: center;
+	background: white;
+	padding-bottom: 10px;
+	margin: 0;
+	font-size: 14px;}	
+.bottomimg {
+	min-height: 7px;
+	background-image: url("../images/card/bottomcurve.png");
+	background-position: 4px;
+}
+.cardimg{max-width: 40px!important;
+  max-height: 40px;}
+.cardrate{width: 75px; padding-right: 5px;}
+.cardrate1{font-size: 12px; padding-right: 5px;}
+.buttonhero2 {
+  display: inline-block;
+  margin: 0 auto;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  box-shadow: 0px 3px rgba(128,128,128,1), 0px 4px rgba(118,118,118,1), 0px 5px rgba(108,108,108,1), 0px 6px rgba(98,98,98,1), 0px 7px rgba(88,88,88,1), 0px 8px rgba(78,78,78,1), 0px 14px 6px -1px rgba(128,128,128,1);
+  transition: -webkit-box-shadow .1s ease-in-out;
+  -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+}
+.buttonhero2 span {
+  background-color: #D2151E;
+  background-image: -webkit-gradient( linear, left bottom, left top, color-stop(50%,rgba(255,255,255,0)),color-stop(50%,rgba(255,255,255,0.3)),color-stop(100%,rgba(255,255,255,0.2)));
+  background-size: 100%, 100%, 100%, 4px 4px;
+  border-radius: 10px;
+  transition: -webkit-transform .1s ease-in-out;
+  display: inline-block;
+  padding: 10px 40px 10px 40px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 22px;
+}
+.buttonhero2:active {
+  box-shadow: 0px 3px rgba(128,128,128,1),0px 4px rgba(118,118,118,1),0px 5px rgba(108,108,108,1), 0px 6px rgba(98,98,98,1),0px 7px rgba(88,88,88,1),0px 8px rgba(78,78,78,1), 0px 10px 2px 0px rgba(128,128,128,.6);
+}
+.buttonhero2:active span {
+  -webkit-transform: translate(0, 5px);
+  transform: translate(0, 5px);
+}
+
+@media (min-width:5px) and (max-width:320.98px){
+.pad{padding:40px 0;}
+.feature-gd {padding: 20px 10px 20px 10px; height: 140px;}
+.producttext{font-size: 14px;}
+.qtypad {padding-left:20px;}
+.leftmargin {margin-left: 0px;}
+.strike{font-size: 14px;}
+.rate{font-size: 14px;}
+.txtwidth {width: 110px;}
+}
+
+@media (min-width:321px) and (max-width:767.98px){
+.pad{padding:40px 0;}
+.feature-gd {padding: 15px 10px 15px 10px; height: 130px;}
+.producttext{font-size: 16px;}
+.qtypad {padding-left:30px;}
+.leftmargin {margin-left: 0px;}
+.strike{font-size: 15px;}
+.rate{font-size: 15px;}
+.txtwidth {width: 110px;}
+}
+
+@media (min-width:768px) and (max-width:992.98px){
+.pad{padding:40px 0;}
+.feature-gd {padding: 20px 10px 20px 10px; height:140px;}	
+.producttext{font-size: 16px;}
+.qtypad {padding-left:20px;}
+.leftmargin {margin-left: 0px;}
+.strike{font-size: 15px;}
+.rate{font-size: 15px;}
+}
+
+@media (min-width:993px) and (max-width:1200.98px){
+.pad{padding:40px 0;}
+.feature-gd {padding: 10px;}
+.producttext {font-size: 15px;}	
+.icon {margin-right: 10px;}
+.leftmargin {margin-left: 0px;}
+.qtypad {padding-left:20px;}
+.strike{font-size: 14px;}
+.rate{font-size: 14px;}
+}
+.card_qty{
+  width: 40px;
+
+padding: revert;
+
+height: auto;
+margin-top: 3px;
+}

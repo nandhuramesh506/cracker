@@ -1,0 +1,178 @@
+#offcanvas-navicon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 102;
+    height: 50px;
+    width: 50px;
+    padding: 10px 6px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    transition: all 400ms ease;
+}
+main {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  overflow: hidden;
+  box-shadow: 0 0 50px #000;
+  transition: transform .5s;
+}
+.nav-open main {
+  transform: scale(.8);
+}
+.nav-trigger {
+  position: fixed;
+  z-index: 4000;
+  top: 100px;
+  right: 0px;
+}
+.nav-trigger span,
+.nav-trigger span::before,
+.nav-trigger span::after {
+  position: absolute;
+  height: 4px;
+  width: 29px;
+  background: #000;
+}
+.nav-trigger span {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background .3s;
+}
+.nav-trigger span::before,
+.nav-trigger span::after {
+  content: '';
+  top: 0;
+  left: 0;
+  transition: background .3s, transform .3s;
+}
+
+.nav-trigger span::before {
+  transform: translateY(-12px);
+}
+ 
+
+.nav-trigger span::after {
+  transform: translateY(12px);
+}
+.nav-trigger:hover span, 
+.nav-trigger:hover span::before,
+.nav-trigger:hover span::after {
+  background: black;
+}
+.nav-open .nav-trigger span {
+  background: transparent;
+}
+.nav-open .nav-trigger span::before,
+.nav-open .nav-trigger span::after {
+  background: #1F2B3D;
+}
+.nav-open .nav-trigger span::before {
+  transform: rotate(-45deg);
+}
+.nav-open .nav-trigger span::after {
+  transform: rotate(45deg);
+}
+.overlay {
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1C1D21;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s, visibility .5s;
+}
+.nav-open .overlay {
+  opacity: .6;
+  visibility: visible;
+}
+.nav-container {
+  position: fixed;
+  z-index: 4000;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 32%;
+  background: #FE3000;
+  overflow: auto;
+  transform: translateZ(0);
+  transform: translateX(100%);
+  transition: transform .5s cubic-bezier(.07,.23,.34,1);
+  scrollbar-width: thin;
+}
+
+.nav-open .nav-container {
+  transform: translateX(0);
+}
+
+.nav-container h2 {
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #AAAAAA;
+  margin: 1.5em 0;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+  font-family: 'Merienda', cursive!important;
+}
+
+.nav a {
+  display: block;
+  padding: 10px 35px;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: serif;
+  text-decoration: none;
+  color: #1F2B3D;
+  transform: translateZ(0);
+}
+
+.nav a:hover{color:#d52727;}
+
+.nav-open .nav a {
+  animation: slide-in .4s .2s backwards;
+}
+
+.nav-open .nav li:nth-of-type(2) a {
+  animation-delay: .3s;
+}
+
+.nav-open .nav li:nth-of-type(3) a {
+  animation-delay: .4s;
+}
+
+.nav-open .nav li:nth-of-type(4) a {
+  animation-delay: .5s;
+}
+
+.nav-open .nav li:nth-of-type(5) a {
+  animation-delay: .6s;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (min-width:5px) and (max-width:767.98px){
+.nav a {font-size: 30px;}
+.nav-container{width:100%;}
+}
+@media (min-width:768px) and (max-width:992.98px){
+.nav-container{width:55%;}	
+}
